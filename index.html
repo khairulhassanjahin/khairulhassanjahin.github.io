@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khairul Hassan Jahin's Portfolio</title>
+    <!-- CSS Styles -->
     <style>
         /* General Styles */
         body {
@@ -15,14 +16,15 @@
         }
         h1, h2 {
             color: #2b6777;
+            text-align: center;
         }
         #navbar {
             background-color: #2b6777;
             overflow: hidden;
+            text-align: center;
         }
         #navbar a {
-            float: left;
-            display: block;
+            display: inline-block;
             color: #fff;
             text-align: center;
             padding: 14px 20px;
@@ -34,9 +36,38 @@
         .tab-content {
             padding: 20px;
             display: none;
+            transition: opacity 0.5s;
         }
         .tab-content.active {
             display: block;
+            opacity: 1;
+        }
+        /* Button and dark mode */
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #2b6777;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #52ab98;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f9;
+        }
+        /* Parallax section */
+        .parallax {
+            background-image: url('your-image.jpg');
+            height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -51,56 +82,34 @@
     <a href="#" onclick="showTab('contact')">Contact</a>
 </div>
 
+<!-- Parallax Section -->
+<div class="parallax"></div>
+
+<!-- Dynamic Dark Mode Toggle -->
+<button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
 <!-- Tab Content -->
 <div id="about" class="tab-content active">
     <h1>About Me</h1>
-    <p>I am Khairul Hassan Jahin, a Research Associate with expertise in <strong>Ecological Economics</strong>, <strong>Ecosocialism</strong>, <strong>Migration Studies</strong>, and <strong>Political Economy</strong>. My work spans various research projects, content creation, and digital experiences.</p>
-    <p><strong>Current Position:</strong> Research Associate at an international NGO and research institute.</p>
-    <h2>Educational Background</h2>
-    <ul>
-        <li><strong>MA in Economics</strong> - South Asian University</li>
-        <li><strong>BBA in Finance</strong> - Jagannath University</li>
-    </ul>
-    <h2>Key Skills</h2>
-    <ul>
-        <li>Research Methodologies: Qualitative & Quantitative Analysis, RCTs, Factor Analysis</li>
-        <li>Data Analysis: Proficient in R, Python, Stata</li>
-        <li>Content Creation: Articles, Graphic Stories, Social Media Strategy</li>
-        <li>Languages: English, Bengali</li>
-    </ul>
+    <p>I am a development economist with a Master’s in Development Economics from South Asian University, New Delhi, and a BBA in Finance from Jagannath University, Dhaka. My academic background is enriched by hands-on research in climate resilience, urban sustainability, and development interventions. I have worked as a Research Assistant for GDRI and Monash University’s CDES, where I honed my expertise in randomized control trials and community-based research. My current focus lies at the intersection of ecological economics, degrowth, and sustainable development, driven by a passion for translating research into meaningful social impact
+</p>
 </div>
 
 <div id="research" class="tab-content">
     <h1>Research Highlights</h1>
     <h2>Migration and Agrarian Studies</h2>
     <p>Explored migration patterns of agrarian workers in the Haor region, analyzing economic impacts and adaptive strategies.</p>
-    <h2>Climate Finance and Political Economy</h2>
-    <p>Currently researching development projects in Bangladesh with a focus on climate finance, applying Elinor Ostrom’s IAD framework and Marxian Dependency theory.</p>
-    <h2>Gender and Social Attitudes</h2>
-    <p>Developed a Gender Attitude Index for analyzing societal attitudes on gender roles, educational equality, and political representation of women.</p>
 </div>
 
-<div id="experience" class="tab-content">
-    <h1>Professional Experience</h1>
-    <h2>Research Associate | International NGO</h2>
-    <p>Conducting field research and analyzing data on climate change, migration, and gender issues. Published articles in Crimson Theory.</p>
-    <h2>Master Trainer | GDRI</h2>
-    <p>Trained 400 enumerators on RCTs and data collection methodologies for a heatwave preparedness project in Dhaka.</p>
-    <h2>Research Assistant | Telementoring Project</h2>
-    <p>Coordinated data organization for a COVID-19 telementoring initiative, in collaboration with GDRI and Monash University.</p>
-</div>
-
-<div id="content" class="tab-content">
-    <h1>Content Creation</h1>
+<div id="experiance" class="tab-content">
+    <h1>Editor</h1>
     <h2>Crimson Theory</h2>
-    <p>As the founder of Crimson Theory, I aim to make Marxist thought accessible to younger audiences through engaging articles and graphic stories.</p>
-    <h2>Podcast Host</h2>
-    <p>Host of a podcast exploring economics, social theory, and current events to engage Gen Z and Generation Alpha in meaningful discourse.</p>
+    <p>Founder of Crimson Theory, sharing insights on economic theories and social issues through engaging articles.</p>
 </div>
 
 <div id="contact" class="tab-content">
     <h1>Let's Connect</h1>
-    <p>If you're interested in my work or would like to discuss collaboration, feel free to reach out!</p>
+    <p>If you'd like to reach out, here are my contact details!</p>
     <ul>
         <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
         <li>LinkedIn: [Your LinkedIn URL]</li>
@@ -108,7 +117,9 @@
     </ul>
 </div>
 
+<!-- JavaScript for Dynamic Features -->
 <script>
+    // Function to show and hide tabs
     function showTab(tabName) {
         var tabs = document.getElementsByClassName('tab-content');
         for (var i = 0; i < tabs.length; i++) {
@@ -116,6 +127,24 @@
         }
         document.getElementById(tabName).classList.add('active');
     }
+
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+
+<!-- Anime.js for Smooth Animations (optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    // Example animation for the page header
+    anime({
+        targets: 'h1',
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo'
+    });
 </script>
 
 </body>
