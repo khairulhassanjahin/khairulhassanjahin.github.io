@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khairul Hassan Jahin's Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #2b6777;
+        }
+        #navbar {
+            background-color: #2b6777;
+            overflow: hidden;
+        }
+        #navbar a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        #navbar a:hover {
+            background-color: #52ab98;
+        }
+        .tab-content {
+            padding: 20px;
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Tabs -->
+<div id="navbar">
+    <a href="#" onclick="showTab('about')">About Me</a>
+    <a href="#" onclick="showTab('research')">Research Highlights</a>
+    <a href="#" onclick="showTab('experience')">Professional Experience</a>
+    <a href="#" onclick="showTab('content')">Content Creation</a>
+    <a href="#" onclick="showTab('contact')">Contact</a>
+</div>
+
+<!-- Tab Content -->
+<div id="about" class="tab-content active">
+    <h1>About Me</h1>
+    <p>I am Khairul Hassan Jahin, a Research Associate with expertise in <strong>Ecological Economics</strong>, <strong>Ecosocialism</strong>, <strong>Migration Studies</strong>, and <strong>Political Economy</strong>. My work spans various research projects, content creation, and digital experiences.</p>
+    <p><strong>Current Position:</strong> Research Associate at an international NGO and research institute.</p>
+    <h2>Educational Background</h2>
+    <ul>
+        <li><strong>MA in Economics</strong> - South Asian University</li>
+        <li><strong>BBA in Finance</strong> - Jagannath University</li>
+    </ul>
+    <h2>Key Skills</h2>
+    <ul>
+        <li>Research Methodologies: Qualitative & Quantitative Analysis, RCTs, Factor Analysis</li>
+        <li>Data Analysis: Proficient in R, Python, Stata</li>
+        <li>Content Creation: Articles, Graphic Stories, Social Media Strategy</li>
+        <li>Languages: English, Bengali</li>
+    </ul>
+</div>
+
+<div id="research" class="tab-content">
+    <h1>Research Highlights</h1>
+    <h2>Migration and Agrarian Studies</h2>
+    <p>Explored migration patterns of agrarian workers in the Haor region, analyzing economic impacts and adaptive strategies.</p>
+    <h2>Climate Finance and Political Economy</h2>
+    <p>Currently researching development projects in Bangladesh with a focus on climate finance, applying Elinor Ostrom’s IAD framework and Marxian Dependency theory.</p>
+    <h2>Gender and Social Attitudes</h2>
+    <p>Developed a Gender Attitude Index for analyzing societal attitudes on gender roles, educational equality, and political representation of women.</p>
+</div>
+
+<div id="experience" class="tab-content">
+    <h1>Professional Experience</h1>
+    <h2>Research Associate | International NGO</h2>
+    <p>Conducting field research and analyzing data on climate change, migration, and gender issues. Published articles in Crimson Theory.</p>
+    <h2>Master Trainer | GDRI</h2>
+    <p>Trained 400 enumerators on RCTs and data collection methodologies for a heatwave preparedness project in Dhaka.</p>
+    <h2>Research Assistant | Telementoring Project</h2>
+    <p>Coordinated data organization for a COVID-19 telementoring initiative, in collaboration with GDRI and Monash University.</p>
+</div>
+
+<div id="content" class="tab-content">
+    <h1>Content Creation</h1>
+    <h2>Crimson Theory</h2>
+    <p>As the founder of Crimson Theory, I aim to make Marxist thought accessible to younger audiences through engaging articles and graphic stories.</p>
+    <h2>Podcast Host</h2>
+    <p>Host of a podcast exploring economics, social theory, and current events to engage Gen Z and Generation Alpha in meaningful discourse.</p>
+</div>
+
+<div id="contact" class="tab-content">
+    <h1>Let's Connect</h1>
+    <p>If you're interested in my work or would like to discuss collaboration, feel free to reach out!</p>
+    <ul>
+        <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
+        <li>LinkedIn: [Your LinkedIn URL]</li>
+        <li>GitHub: [Your GitHub URL]</li>
+    </ul>
+</div>
+
+<script>
+    function showTab(tabName) {
+        var tabs = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove('active');
+        }
+        document.getElementById(tabName).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
