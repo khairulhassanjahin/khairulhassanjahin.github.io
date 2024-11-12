@@ -9,117 +9,154 @@
         /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #e0ffff; /* Aqua */
+            color: #000; /* Black text */
             margin: 0;
             padding: 0;
         }
         h1, h2 {
-            color: #2b6777;
+            color: #004c4c; /* Dark teal */
             text-align: center;
         }
         #navbar {
-            background-color: #2b6777;
+            background-color: #004c4c; /* Dark teal */
             overflow: hidden;
             text-align: center;
         }
         #navbar a {
             display: inline-block;
             color: #fff;
-            text-align: center;
             padding: 14px 20px;
             text-decoration: none;
         }
         #navbar a:hover {
-            background-color: #52ab98;
+            background-color: #808080; /* Gray */
         }
+        /* Banner */
+        .banner {
+            background-color: #004c4c; /* Dark teal */
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        .banner h1 {
+            margin: 0;
+        }
+        .banner h3 {
+            margin: 5px 0;
+        }
+        /* Social Icons */
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5em;
+        }
+        /* Tab content */
         .tab-content {
             padding: 20px;
             display: none;
-            transition: opacity 0.5s;
         }
         .tab-content.active {
             display: block;
-            opacity: 1;
         }
-        /* Button and dark mode */
-        button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #2b6777;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #52ab98;
-        }
-        .dark-mode {
-            background-color: #333;
-            color: #f4f4f9;
-        }
-        /* Parallax section */
-        .parallax {
-            background-image: url('your-image.jpg');
-            height: 400px;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin-bottom: 20px;
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .tab-content {
+                padding: 10px;
+            }
+            .social-icons a {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
 <body>
 
+<!-- Banner with Name and Designation -->
+<div class="banner">
+    <h1>Khairul Hassan Jahin</h1>
+    <h3>Aspiring Development Economist, Economic Researcher</h3>
+    <div class="social-icons">
+        <a href="mailto:khairulhassanjahin@gmail.com">✉️</a>
+        <a href="https://www.linkedin.com/in/jahinhassan/">LinkedIn</a>
+        <a href="https://github.com/username">GitHub</a>
+    </div>
+</div>
+
 <!-- Navigation Tabs -->
 <div id="navbar">
-    <a href="#" onclick="showTab('about')">About Me</a>
-    <a href="#" onclick="showTab('research')">Research Highlights</a>
-    <a href="#" onclick="showTab('experience')">Professional Experience</a>
-    <a href="#" onclick="showTab('content')">Content Creation</a>
+    <a href="#" onclick="showTab('resume')">Résumé</a>
+    <a href="#" onclick="showTab('research')">Research Affiliations</a>
+    <a href="#" onclick="showTab('oped')">Op-Ed</a>
+    <a href="#" onclick="showTab('article')">Article</a>
+    <a href="#" onclick="showTab('translation')">Translation</a>
+    <a href="#" onclick="showTab('places')">Places and Photographs</a>
     <a href="#" onclick="showTab('contact')">Contact</a>
 </div>
 
-<!-- Parallax Section -->
-<div class="parallax"></div>
-
-<!-- Dynamic Dark Mode Toggle -->
-<button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
 <!-- Tab Content -->
-<div id="about" class="tab-content active">
-    <h1>About Me</h1>
-    <p>I am a development economist with a Master’s in Development Economics from South Asian University, New Delhi, and a BBA in Finance from Jagannath University, Dhaka. My academic background is enriched by hands-on research in climate resilience, urban sustainability, and development interventions. I have worked as a Research Assistant for GDRI and Monash University’s CDES, where I honed my expertise in randomized control trials and community-based research. My current focus lies at the intersection of ecological economics, degrowth, and sustainable development, driven by a passion for translating research into meaningful social impact
-</p>
-</div>
-
-<div id="research" class="tab-content">
-    <h1>Research Highlights</h1>
-    <h2>Migration and Agrarian Studies</h2>
-    <p>Explored migration patterns of agrarian workers in the Haor region, analyzing economic impacts and adaptive strategies.</p>
-</div>
-
-<div id="experiance" class="tab-content">
-    <h1>Editor</h1>
-    <h2>Crimson Theory</h2>
-    <p>Founder of Crimson Theory, sharing insights on economic theories and social issues through engaging articles.</p>
-</div>
-
-<div id="contact" class="tab-content">
-    <h1>Let's Connect</h1>
-    <p>If you'd like to reach out, here are my contact details!</p>
+<div id="resume" class="tab-content active">
+    <h2>Résumé</h2>
+    <p>Explore my professional background:</p>
     <ul>
-        <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
-        <li>LinkedIn: [Your LinkedIn URL]</li>
-        <li>GitHub: [Your GitHub URL]</li>
+        <li><strong>Research Interests</strong>: Structural Transformation, Environmental and Ecological Economics, Degrowth, Climate Change.</li>
+        <li><strong>Education</strong>:
+            <ul>
+                <li>MA in Economics, South Asian University (Specialization in Development Economics)</li>
+                <li>BBA in Finance, Jagannath University</li>
+            </ul>
+        </li>
+        <li><strong>Work Experience</strong>:
+            <ul>
+                <li>Master Trainer at Chief Heat Officer’s Office, Dhaka North City Corporation</li>
+                <li>Research Assistant at Center for Development Economics and Sustainability, Monash University</li>
+            </ul>
+        </li>
+        <li><strong>Skills</strong>: STATA (Expert), WordPress (Expert), MATLAB, LaTeX</li>
     </ul>
 </div>
 
-<!-- JavaScript for Dynamic Features -->
+<div id="research" class="tab-content">
+    <h2>Research Affiliations</h2>
+    <p>Collaborated with organizations such as Monash University, Dhaka North City Corporation, and South Asian University.</p>
+</div>
+
+<div id="oped" class="tab-content">
+    <h2>Op-Ed</h2>
+    <p>Published works include:</p>
+    <ul>
+        <li><a href="https://www.tbsnews.net/thoughts/marxs-echo-resonance-degrowth-communism-738022">Marx’s Echo: The Resonance of Degrowth Communisms</a> - The Business Standard</li>
+    </ul>
+</div>
+
+<div id="article" class="tab-content">
+    <h2>Article</h2>
+    <p>Primitive Economy and the Origin of Class, published in Economic Study Center, University of Dhaka.</p>
+</div>
+
+<div id="translation" class="tab-content">
+    <h2>Translation</h2>
+    <p>Translations of academic texts and articles related to economic research are available upon request.</p>
+</div>
+
+<div id="places" class="tab-content">
+    <h2>Places and Photographs</h2>
+    <p>Coming soon: Travel stories and photographs from my journeys.</p>
+</div>
+
+<div id="contact" class="tab-content">
+    <h2>Contact</h2>
+    <p>Feel free to reach out:</p>
+    <ul>
+        <li>Email: khairulhassanjahin@gmail.com</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/jahinhassan/">jahinhassan</a></li>
+        <li>Phone: +880 1971 104 077</li>
+    </ul>
+</div>
+
+<!-- JavaScript for Tabs -->
 <script>
-    // Function to show and hide tabs
     function showTab(tabName) {
         var tabs = document.getElementsByClassName('tab-content');
         for (var i = 0; i < tabs.length; i++) {
@@ -127,24 +164,6 @@
         }
         document.getElementById(tabName).classList.add('active');
     }
-
-    // Function to toggle dark mode
-    function toggleDarkMode() {
-        document.body.classList.toggle('dark-mode');
-    }
-</script>
-
-<!-- Anime.js for Smooth Animations (optional) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script>
-    // Example animation for the page header
-    anime({
-        targets: 'h1',
-        translateY: [-50, 0],
-        opacity: [0, 1],
-        duration: 1000,
-        easing: 'easeOutExpo'
-    });
 </script>
 
 </body>
